@@ -18,7 +18,7 @@ router.route("/forgotpassword").post(async (req, res) => {
     },
     { $set: { resetString: randomString } }
   );
-  const link = `http://localhost:3000/resetpassword/${randomString}`;
+  const link = `https://forgot-password-task.netlify.app/resetpassword/${randomString}`;
   let mailTransporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
